@@ -1,0 +1,14 @@
+version: '2'
+
+services:
+  mongo:
+    image: mongo:3.6
+    ports:
+      - "27017"
+    network_mode: host
+    environment:
+      - HOST_NAME=localhost
+    volumes:
+      - mongo_data:/data/db
+volumes:
+  mongo_data:
